@@ -38,5 +38,6 @@ export const autoVersioning = (version, file) => {
 
 
 if (Deno.args[0] && Deno.args[1]) {
-    autoVersioning(Deno.args[0], Deno.args[1])
+    const version = import(Deno.args[0])
+    autoVersioning(, Deno.args[1])
 }
